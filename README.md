@@ -6,6 +6,7 @@ ends.
 
 This can useful for brief reporting on async requests:
 
+```javascript
     var DotReporter = require('dot-reporter').DotReporter,
         dot = new DotReporter(/* optional state to color mappings */);
 
@@ -19,6 +20,7 @@ This can useful for brief reporting on async requests:
 
             dot.endTask('taskID', data.endState);
         });
+```
 
 Run `npm test` to see an example.
 
