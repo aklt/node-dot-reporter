@@ -10,16 +10,16 @@ This can useful for brief reporting on async requests:
     var DotReporter = require('dot-reporter').DotReporter,
         dot = new DotReporter(/* optional state to color mappings */);
 
-        ...
+    ...
 
-        // Start a task
-        dot.taskStart('taskID');
-        makeARequest(function (err, data) {
+    // Start a task
+    dot.taskStart('taskID');
+    makeARequest(function (err, data) {
 
-            // ... Time passes before we get to here ...
+        // ... Time passes before we get to here ...
 
-            dot.endTask('taskID', data.endState);
-        });
+        dot.endTask('taskID', data.endState);
+    });
 ```
 
 The default state map is:
