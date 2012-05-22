@@ -2,7 +2,8 @@
 
 /*global setTimeout*/
 
-var d = new (require('lib/DotReporter').DotReporter)(),
+var DotReporter = require('lib/DotReporter').DotReporter,
+    d = new DotReporter(),
     ids = [],
     started = [];
 

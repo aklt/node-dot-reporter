@@ -22,5 +22,18 @@ This can useful for brief reporting on async requests:
         });
 ```
 
+The default state map is:
+
+```javascript
+    {
+        start: 'white',
+        end:   'green',
+        err:   'red',
+        bad:   'purple'
+    }
+```
+
+The initial event state must always be called `start`.
+
 Run `npm test` to see an example.
 
