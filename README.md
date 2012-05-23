@@ -18,7 +18,7 @@ This can useful for brief reporting on async requests:
 
         // ... Time passes before we get to here ...
 
-        dot.endTask('taskID', data.endState);
+        dot.taskEnd('taskID', data.endState);
     });
 ```
 
