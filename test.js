@@ -2,8 +2,19 @@
 
 /*global setTimeout*/
 
-var DotReporter = require('lib/DotReporter').DotReporter,
-    d = new DotReporter(),
+var DotReporter = require('./lib/DotReporter').DotReporter,
+    config = {
+        start: 'white',
+        end:   'green',
+        err:   'red',
+        foo:   'brown',
+        bar:   'blue',
+        hat:   'cyan'
+    },
+    configKeys = Object.keys(config).filter(function (key) {
+        return key !== 'start';
+    }),
+    d = new DotReporter(config),
     ids = [],
     started = [];
 
@@ -23,7 +34,7 @@ function report() {
                     var idx = Math.floor(Math.random() * started.length),
                         num = started[idx];
                     if (num) {
-                        d.taskEnd(id, Math.random() >= 0.5 ? 'end' : 'bad');
+                        d.taskEnd(id, configKeys[Math.floor(Math.random() * configKeys.length)]);
                         delete started[idx];
                         break;
                     }
