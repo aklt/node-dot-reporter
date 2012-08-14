@@ -2,7 +2,7 @@
     "author": "Anders Thøgersen <anders # bladre.dk>",
     "name": "dot-reporter",
     "description": "Print colorful dots to show progress and status of asynchronously completing events",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "homepage": "http://bladre.dk/projects",
     "main": "lib/DotReporter.js",
     "scripts": {
